@@ -1,0 +1,29 @@
+{
+  "based_on": "MuxGNN_16Vehicles_4RSU_InstantTransfer_FullMigration.zip",
+  "scope": "seven generated DAGs sequentially in a 600 second offline SUMO trace episode, per-DAG deadlines, offline MuxGNN data, PPO continuity, HEFT comparison, time-limit validation",
+  "modified_original_files": [
+    "scheduling_utils/muxgnn/mobility3/builder.py",
+    "scheduling_utils/muxgnn/mobility3/env.py",
+    "scheduling_utils/muxgnn/mobility3/generate.py",
+    "scheduling_utils/muxgnn/mobility3/heft_online.py",
+    "scheduling_utils/muxgnn/mobility3/loader.py",
+    "scheduling_utils/muxgnn/mobility3/settings.py",
+    "scheduling_utils/muxgnn/mobility3/simulator.py",
+    "scheduling_utils/muxgnn/rl/adapter.py"
+  ],
+  "original_files_modified_count": 8,
+  "new_source_files": [
+    "scheduling_utils/muxgnn/mobility3/multi_dag.py",
+    "scheduling_utils/muxgnn/mobility3/episode.py",
+    "scheduling_utils/muxgnn/mobility3/export_dags.py",
+    "scheduling_utils/muxgnn/mobility3/verify_multi_dag.py",
+    "scheduling_utils/muxgnn/mobility3/evaluate.py",
+    "scheduling_utils/RUN_7DAG_600S_FA.md"
+  ],
+  "derived_dag_definitions": 168,
+  "original_Sumo_files_unchanged": true,
+  "original_reference_DAG_and_A7_A12_benchmarks_unchanged": true,
+  "kept_frozen_network_topology_and_rewards": true,
+  "real_SUMO_training_in_this_environment": "not_run_missing_SUMO_PyG_gymnasium_stable_baselines3",
+  "synthetic_trace_test": "passed_for_structure_only"
+}

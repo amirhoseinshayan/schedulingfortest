@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scaled_fields_checked": 720,
+  "tasks_checked": 60,
+  "time_factor": 5.0,
+  "energy_factor": 5.0,
+  "power_factor": 1.0,
+  "sumo_step_length_sec": 0.05,
+  "sumo_seed": 42,
+  "source_file_sha256": "496355b952360388aac670ad5d29f480285cd12054686f85200a9491fefd324b",
+  "scaled_profile_sha256": "222b1a97f1c21203157bad5b9354580639cae5b3f2c34096d0bc32699b805c6e",
+  "note": "STATIC math/XML audit; SUMO and PPO dynamic tests are separate"
+}

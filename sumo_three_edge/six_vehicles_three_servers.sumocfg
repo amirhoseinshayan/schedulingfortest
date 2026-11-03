@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <input>
+    <net-file value="osm.net.xml.gz" />
+    <route-files value="six_vehicles.rou.xml" />
+    <additional-files value="three_edge_servers.add.xml,persistent_random_rerouters.add.xml" />
+  </input>
+  <time>
+    <begin value="0" />
+    <end value="600" />
+    <step-length value="0.05" />
+  </time>
+  <processing>
+    <time-to-teleport value="-1" />
+    <ignore-route-errors value="false" />
+  </processing>
+  <report>
+    <no-step-log value="true" />
+  </report>
+  <random_number>
+    <seed value="42" />
+  </random_number>
+</configuration>

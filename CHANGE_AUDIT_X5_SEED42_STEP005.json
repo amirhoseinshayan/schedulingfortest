@@ -1,0 +1,31 @@
+{
+  "reference_zip": "MuxGNN_v4_3Edge_Full_Project.zip",
+  "modified_existing_files": [
+    "scheduling_utils/README.md",
+    "scheduling_utils/RUN_SUMO_3EDGE_FA.md",
+    "scheduling_utils/muxgnn/mobility3/builder.py",
+    "scheduling_utils/muxgnn/mobility3/capture.py",
+    "scheduling_utils/muxgnn/mobility3/env.py",
+    "scheduling_utils/muxgnn/mobility3/generate.py",
+    "scheduling_utils/muxgnn/mobility3/pretrain.py",
+    "scheduling_utils/muxgnn/mobility3/settings.py",
+    "scheduling_utils/muxgnn/mobility3/simulator.py",
+    "scheduling_utils/muxgnn/mobility3/validate_static.py",
+    "scheduling_utils/sumo_three_edge/route_manifest.json",
+    "scheduling_utils/sumo_three_edge/six_vehicles.rou.xml",
+    "scheduling_utils/sumo_three_edge/six_vehicles_three_servers.sumocfg"
+  ],
+  "added_new_files": [
+    "scheduling_utils/data/muxgnn/v4_mobility_three_edge_x5_seed42_step005_v2/SCALING_REVALIDATED.json",
+    "scheduling_utils/data/muxgnn/v4_mobility_three_edge_x5_seed42_step005_v2/SCALING_VALIDATION.json",
+    "scheduling_utils/data/muxgnn/v4_mobility_three_edge_x5_seed42_step005_v2/STATIC_VALIDATION.json",
+    "scheduling_utils/data/muxgnn/v4_mobility_three_edge_x5_seed42_step005_v2/dependency_edges.csv",
+    "scheduling_utils/data/muxgnn/v4_mobility_three_edge_x5_seed42_step005_v2/derived_task_profiles_5x.csv",
+    "scheduling_utils/muxgnn/mobility3/scaled_source.py",
+    "scheduling_utils/muxgnn/mobility3/validate_scaling.py"
+  ],
+  "deleted_files": [],
+  "protected_data_and_code_untouched": true,
+  "dynamic_sumo_test_available": false,
+  "torch_geometric_full_training_test_available": false
+}

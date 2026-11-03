@@ -1,0 +1,40 @@
+{
+  "schema": "4 fixed Edge servers, 16 mobile compute vehicles, distance reachability only",
+  "v2v_range_m": 150,
+  "v2i_range_m": 300,
+  "hardware_note": "each Edge server has 12 A7 and 12 A12 cores; matches Edge0 of frozen v4; Edge1/Edge2 are identical declared replicas (synthetic); EDGE3 same synthetic hardware replica, fourth site selected by incremental 300m road-network coverage",
+  "servers": [
+    {
+      "id": "EDGE0",
+      "x": 500.0,
+      "y": 700.0,
+      "range_m": 300,
+      "a7_cores": 12,
+      "a12_cores": 12
+    },
+    {
+      "id": "EDGE1",
+      "x": 1050.0,
+      "y": 800.0,
+      "range_m": 300,
+      "a7_cores": 12,
+      "a12_cores": 12
+    },
+    {
+      "id": "EDGE2",
+      "x": 1400.0,
+      "y": 330.0,
+      "range_m": 300,
+      "a7_cores": 12,
+      "a12_cores": 12
+    },
+    {
+      "id": "EDGE3",
+      "x": 829.67,
+      "y": 233.18,
+      "range_m": 300,
+      "a7_cores": 12,
+      "a12_cores": 12
+    }
+  ]
+}

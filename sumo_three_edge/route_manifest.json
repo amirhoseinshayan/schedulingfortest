@@ -1,0 +1,112 @@
+{
+  "schema": "native seeded SUMO rerouter route manifest for 16 moving compute vehicles",
+  "seed": 42,
+  "vehicle_ids": [
+    "V0",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15"
+  ],
+  "server_ids": [
+    "EDGE0",
+    "EDGE1",
+    "EDGE2",
+    "EDGE3"
+  ],
+  "initial_routes": {
+    "V0": {
+      "start_edge": "1119937599#2",
+      "initial_destination": "85255869#0",
+      "initial_route_edges": 11
+    },
+    "V1": {
+      "start_edge": "-882389497",
+      "initial_destination": "-109902441#1",
+      "initial_route_edges": 13
+    },
+    "V2": {
+      "start_edge": "882389494#0",
+      "initial_destination": "4402037#0",
+      "initial_route_edges": 6
+    },
+    "V3": {
+      "start_edge": "191556835#0",
+      "initial_destination": "710761408#0",
+      "initial_route_edges": 8
+    },
+    "V4": {
+      "start_edge": "-1303648806#1",
+      "initial_destination": "1447972532#0",
+      "initial_route_edges": 16
+    },
+    "V5": {
+      "start_edge": "-24913267#3",
+      "initial_destination": "-356359316#1",
+      "initial_route_edges": 13
+    },
+    "V6": {
+      "start_edge": "-1464597518",
+      "initial_destination": "-356359316#1",
+      "initial_route_edges": 15
+    },
+    "V7": {
+      "start_edge": "-4579366#2",
+      "initial_destination": "-1199889720",
+      "initial_route_edges": 10
+    },
+    "V8": {
+      "start_edge": "-43231842",
+      "initial_destination": "-1423265551#1",
+      "initial_route_edges": 10
+    },
+    "V9": {
+      "start_edge": "356359316#0",
+      "initial_destination": "1126237668#0",
+      "initial_route_edges": 17
+    },
+    "V10": {
+      "start_edge": "375311155#0",
+      "initial_destination": "85255869#0",
+      "initial_route_edges": 13
+    },
+    "V11": {
+      "start_edge": "-909333702",
+      "initial_destination": "-25945966",
+      "initial_route_edges": 6
+    },
+    "V12": {
+      "start_edge": "-1462868925#2",
+      "initial_destination": "4402037#0",
+      "initial_route_edges": 15
+    },
+    "V13": {
+      "start_edge": "154041918#0",
+      "initial_destination": "1426897601#0",
+      "initial_route_edges": 10
+    },
+    "V14": {
+      "start_edge": "-24234486",
+      "initial_destination": "1123184403",
+      "initial_route_edges": 35
+    },
+    "V15": {
+      "start_edge": "-1468548800#0",
+      "initial_destination": "65040958",
+      "initial_route_edges": 9
+    }
+  },
+  "destination_trigger_count": 30,
+  "exit_guards": 10
+}

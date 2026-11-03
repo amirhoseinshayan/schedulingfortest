@@ -1,0 +1,40 @@
+{
+  "change_name": "mobility3 atomic-transfer migration and buffered results",
+  "base_zip": "MuxGNN_v4_16Vehicles_4EdgeServers_Full_Project.zip",
+  "changed_files": [
+    "muxgnn/mobility3/simulator.py",
+    "muxgnn/mobility3/env.py",
+    "muxgnn/mobility3/train.py",
+    "muxgnn/mobility3/heft_online.py",
+    "RUN_16V_4EDGE_FA.md"
+  ],
+  "new_files": [
+    "muxgnn/mobility3/verify_migration.py",
+    "RUN_MIGRATION_FA.md",
+    "CHANGE_AUDIT_MIGRATION.json"
+  ],
+  "supervisor_assumption": "data transfer is atomic / instantaneous at decision time",
+  "extra_explicit_model_assumption": "zero communication energy because no task data/checkpoint volume exists",
+  "unchanged": [
+    "60-task DAG",
+    "126 dependencies",
+    "16 vehicles",
+    "4 edge servers",
+    "5 graph relations",
+    "2 muxGNN layers",
+    "fivefold runtime-deadline-energy source",
+    "SUMO step and rerouters",
+    "offline SUMO trace",
+    "QoS*exp(-normalized energy) reward formula"
+  ],
+  "tests": [
+    "simulator migration/progress/energy/capacity/stale-event successful with synthetic trace",
+    "buffered output and dependency causality successful",
+    "60-task baseline with synthetic trace successful",
+    "graph/action mask dimensions and neural forward numerical shape smoke tested with dependency shims"
+  ],
+  "not_tested": [
+    "actual SUMO run",
+    "real stable-baselines3 PPO training"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "scenario_id": 2,
+  "scenario_name": "scenario_0002",
+  "split": "train",
+  "seed": 4002,
+  "behavior_policy": "lowest_energy",
+  "snapshot_mode": "event_driven_decision_epochs",
+  "time_unit": "second",
+  "num_snapshots": 121,
+  "final_simulation_time_sec": 15.589,
+  "final_completed_tasks": 60,
+  "event_counts": {
+    "initial_ready_tasks": 1,
+    "task_started": 60,
+    "task_completion": 25,
+    "task_completion_and_ready": 35
+  },
+  "scenario_capacity_a7": [
+    4,
+    4,
+    5,
+    3,
+    6,
+    4,
+    9
+  ],
+  "scenario_capacity_a12": [
+    5,
+    5,
+    2,
+    2,
+    1,
+    2,
+    12
+  ],
+  "background_reserved_a7": [
+    2,
+    2,
+    1,
+    3,
+    0,
+    2,
+    3
+  ],
+  "background_reserved_a12": [
+    1,
+    1,
+    4,
+    4,
+    5,
+    4,
+    0
+  ],
+  "trajectory_csv": "trajectory.csv",
+  "snapshots_dir": "snapshots"
+}

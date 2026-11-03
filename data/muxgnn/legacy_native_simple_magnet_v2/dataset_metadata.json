@@ -1,0 +1,334 @@
+{
+  "dataset_name": "Legacy-native Simple MAGNET Heterogeneous Graph v2",
+  "dataset_version": "legacy_native_simple_magnet_v2",
+  "purpose": "sparse, resource-heterogeneous, auditable base heterogeneous graph for muxGNN",
+  "seed": 42,
+  "source": {
+    "legacy_dataset": "data/legacy/dag_dataset_gang_a7_a12.csv",
+    "legacy_row_index": 0,
+    "legacy_dataset_sha256": "00b25ab8070ab7e9224034432ff35cfc50542f3ff438b413dc03a443e25d0aad",
+    "dagbench_used": false,
+    "dagbench_topology_used": false,
+    "external_workflow_fusion": false
+  },
+  "graph": {
+    "node_types": [
+      "task",
+      "vehicle",
+      "edge_server"
+    ],
+    "num_tasks": 60,
+    "num_vehicles": 6,
+    "num_edge_servers": 1,
+    "total_nodes": 67,
+    "num_topological_layers": 8,
+    "topological_layer_sizes": [
+      8,
+      8,
+      8,
+      8,
+      7,
+      7,
+      7,
+      7
+    ],
+    "num_roots": 8,
+    "root_task_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "num_sinks": 7,
+    "sink_task_ids": [
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "num_dependency_edges": 126,
+    "max_layer_jump": 1,
+    "weakly_connected": true,
+    "relation_edge_counts": {
+      "precedes": 126,
+      "local_execute_on": 60,
+      "v2v_offload_to": 109,
+      "v2i_offload_to": 60,
+      "contends_with": 30
+    },
+    "candidate_policy": {
+      "v2v_reachability_pruned": true,
+      "infeasible_task_resource_edges_removed": true,
+      "candidate_edge_exists_only_if_any_processor_feasible": true
+    }
+  },
+  "resource_model": {
+    "source_vehicle_id": 0,
+    "vehicle_count": 6,
+    "vehicle_a7_cores": 6,
+    "vehicle_a12_cores": 6,
+    "edge_server_count": 1,
+    "edge_a7_cores": 12,
+    "edge_a12_cores": 12,
+    "initial_available_cores_equal_total": false,
+    "vehicle_available_a7": [
+      6,
+      4,
+      3,
+      5,
+      2,
+      6
+    ],
+    "vehicle_available_a12": [
+      6,
+      2,
+      6,
+      4,
+      3,
+      1
+    ],
+    "controlled_v2v_reachable_vehicle_ids": [
+      1,
+      2
+    ],
+    "reachability_semantics": "controlled static candidate subset; no distance/radio physics claimed",
+    "compute_scale": 1.0,
+    "power_scale": 1.0,
+    "background_load": false
+  },
+  "task_state": {
+    "initial_ready_rule": "DAG roots only",
+    "initial_running": 0,
+    "initial_completed": 0
+  },
+  "execution_model": {
+    "runtime": "legacy perfect_linear_speedup",
+    "formula": "exec_time(resource,processor)=legacy_time(processor)/(gang_size*compute_scale)",
+    "energy_formula": "exec_energy=exec_time*gang_size*legacy_power*power_scale",
+    "time_semantics": "canonical relative simulation time inherited from validated Legacy dataset",
+    "physical_wall_clock_seconds_claimed": false
+  },
+  "relations": {
+    "precedes": {
+      "meaning": "exact Legacy DAG precedence",
+      "edge_features": []
+    },
+    "local_execute_on": {
+      "meaning": "task to source vehicle 0",
+      "edge_features": [
+        "exec_time_a7",
+        "exec_time_a12",
+        "exec_energy_a7",
+        "exec_energy_a12",
+        "available_ratio_a7",
+        "available_ratio_a12",
+        "feasible_a7",
+        "feasible_a12"
+      ]
+    },
+    "v2v_offload_to": {
+      "meaning": "candidate to a controlled reachable non-source vehicle, kept only when at least one processor pool can fit the gang; no wireless physics in v2",
+      "edge_features": [
+        "exec_time_a7",
+        "exec_time_a12",
+        "exec_energy_a7",
+        "exec_energy_a12",
+        "available_ratio_a7",
+        "available_ratio_a12",
+        "feasible_a7",
+        "feasible_a12"
+      ]
+    },
+    "v2i_offload_to": {
+      "meaning": "candidate to edge server, kept only when at least one processor pool can fit the gang; no wireless physics in v2",
+      "edge_features": [
+        "exec_time_a7",
+        "exec_time_a12",
+        "exec_energy_a7",
+        "exec_energy_a12",
+        "available_ratio_a7",
+        "available_ratio_a12",
+        "feasible_a7",
+        "feasible_a12"
+      ]
+    },
+    "contends_with": {
+      "meaning": "initially-ready task pair whose gang widths exceed one 6-core homogeneous vehicle pool",
+      "edge_features": [
+        "source_gang_ratio",
+        "target_gang_ratio",
+        "combined_gang_ratio",
+        "vehicle_pool_contention"
+      ],
+      "symmetric": true
+    }
+  },
+  "feature_names": {
+    "task_node": [
+      "gang_size",
+      "deadline",
+      "exec_time_a7",
+      "exec_time_a12",
+      "energy_a7",
+      "energy_a12",
+      "is_ready",
+      "is_running",
+      "is_completed"
+    ],
+    "vehicle_node": [
+      "total_a7_cores",
+      "total_a12_cores",
+      "available_a7_ratio",
+      "available_a12_ratio"
+    ],
+    "edge_server_node": [
+      "total_a7_cores",
+      "total_a12_cores",
+      "available_a7_ratio",
+      "available_a12_ratio"
+    ],
+    "dependency_edge": [],
+    "local_execution_edge": [
+      "exec_time_a7",
+      "exec_time_a12",
+      "exec_energy_a7",
+      "exec_energy_a12",
+      "available_ratio_a7",
+      "available_ratio_a12",
+      "feasible_a7",
+      "feasible_a12"
+    ],
+    "v2v_offloading_edge": [
+      "exec_time_a7",
+      "exec_time_a12",
+      "exec_energy_a7",
+      "exec_energy_a12",
+      "available_ratio_a7",
+      "available_ratio_a12",
+      "feasible_a7",
+      "feasible_a12"
+    ],
+    "v2i_offloading_edge": [
+      "exec_time_a7",
+      "exec_time_a12",
+      "exec_energy_a7",
+      "exec_energy_a12",
+      "available_ratio_a7",
+      "available_ratio_a12",
+      "feasible_a7",
+      "feasible_a12"
+    ],
+    "contention_edge": [
+      "source_gang_ratio",
+      "target_gang_ratio",
+      "combined_gang_ratio",
+      "vehicle_pool_contention"
+    ]
+  },
+  "normalization": {
+    "gang_size_scale": 6,
+    "deadline_scale": 94.01511627906977,
+    "task_execution_time_scale": 133.02325581395348,
+    "task_energy_scale": 112.52311808712888,
+    "resource_core_scale": 12.0,
+    "candidate_execution_time_scale": 46.61627960205078,
+    "candidate_energy_scale": 112.52311706542969,
+    "binary_features": "kept as 0/1",
+    "fit_scope": "single validated Legacy graph v2; scales are saved explicitly for reproducibility"
+  },
+  "provenance": {
+    "task_gang_size": "Legacy dataset",
+    "task_deadline": "Legacy DAG-aware derived deadline",
+    "task_execution_time": "Legacy measurement-derived canonical timing",
+    "task_energy": "Legacy canonical execution time multiplied by measured/derived power",
+    "dependency_topology": "Legacy validated 60-task DAG",
+    "resource_capacity": "controlled simulation assumption",
+    "resource_availability": "controlled heterogeneous initial simulation state",
+    "v2v_reachability": "controlled static candidate subset",
+    "candidate_time_energy": "derived from task profile + gang width + resource capacity model",
+    "contention": "derived from initial ready state + gang widths"
+  },
+  "intentionally_omitted_v2": [
+    "DAGBench",
+    "DAGBench cost",
+    "DAGBench data_size",
+    "mobility",
+    "vehicle position",
+    "V2V/V2I distance",
+    "link rate",
+    "transmission delay",
+    "contact duration",
+    "queue delay",
+    "random background load",
+    "migration"
+  ],
+  "benchmark_names": [
+    "modified_modified_modified_patricia.csv",
+    "modified_basicmath.csv",
+    "bitcount.csv",
+    "modified_modified_sha.csv",
+    "modified_modified_dijkstra.csv",
+    "modified_modified_bitcount.csv",
+    "modified_modified_basicmath.csv",
+    "modified_bitcount.csv",
+    "qsort.csv",
+    "lame.csv",
+    "modified_modified_modified_stringsearch.csv",
+    "modified_qsort.csv",
+    "modified_modified_modified_modified_lame.csv",
+    "jpeg.csv",
+    "modified_modified_modified_modified_sha.csv",
+    "modified_modified_modified_lame.csv",
+    "crc32.csv",
+    "sha.csv",
+    "modified_modified_qsort.csv",
+    "modified_lame.csv",
+    "modified_stringsearch.csv",
+    "modified_modified_modified_modified_fft.csv",
+    "modified_modified_modified_sha.csv",
+    "modified_modified_modified_modified_patricia.csv",
+    "modified_jpeg.csv",
+    "modified_modified_stringsearch.csv",
+    "modified_modified_modified_jpeg.csv",
+    "modified_modified_modified_modified_susan.csv",
+    "modified_modified_modified_modified_basicmath.csv",
+    "modified_modified_fft.csv",
+    "modified_sha.csv",
+    "modified_modified_modified_fft.csv",
+    "modified_modified_modified_susan.csv",
+    "basicmath.csv",
+    "modified_modified_modified_dijkstra.csv",
+    "modified_modified_modified_qsort.csv",
+    "modified_modified_modified_bitcount.csv",
+    "susan.csv",
+    "modified_dijkstra.csv",
+    "modified_modified_modified_modified_bitcount.csv",
+    "fft.csv",
+    "modified_patricia.csv",
+    "modified_modified_modified_basicmath.csv",
+    "dijkstra.csv",
+    "modified_modified_susan.csv",
+    "modified_modified_modified_modified_crc32.csv",
+    "modified_modified_patricia.csv",
+    "modified_modified_modified_modified_dijkstra.csv",
+    "modified_modified_modified_modified_qsort.csv",
+    "modified_crc32.csv",
+    "modified_modified_jpeg.csv",
+    "modified_modified_modified_modified_jpeg.csv",
+    "stringsearch.csv",
+    "patricia.csv",
+    "modified_modified_lame.csv",
+    "modified_modified_crc32.csv",
+    "modified_fft.csv",
+    "modified_susan.csv",
+    "modified_modified_modified_crc32.csv",
+    "modified_modified_modified_modified_stringsearch.csv"
+  ]
+}

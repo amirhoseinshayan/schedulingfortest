@@ -1,0 +1,1241 @@
+{
+  "dataset_version": "legacy_native_dynamic_magnet_v4_physical_time",
+  "time_unit": "second",
+  "split_unit": "scenario",
+  "splits": {
+    "train": [
+      "scenario_0000",
+      "scenario_0001",
+      "scenario_0002",
+      "scenario_0003",
+      "scenario_0004",
+      "scenario_0005",
+      "scenario_0006",
+      "scenario_0007",
+      "scenario_0008",
+      "scenario_0009",
+      "scenario_0010",
+      "scenario_0011",
+      "scenario_0012",
+      "scenario_0013",
+      "scenario_0014",
+      "scenario_0015",
+      "scenario_0016",
+      "scenario_0017"
+    ],
+    "val": [
+      "scenario_0018",
+      "scenario_0019",
+      "scenario_0020"
+    ],
+    "test": [
+      "scenario_0021",
+      "scenario_0022",
+      "scenario_0023"
+    ]
+  },
+  "scenario_count": 24,
+  "total_snapshots": 2902,
+  "scenarios": {
+    "scenario_0000": {
+      "scenario_id": 0,
+      "scenario_name": "scenario_0000",
+      "split": "train",
+      "seed": 4000,
+      "behavior_policy": "earliest_finish",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        6,
+        6,
+        6,
+        3,
+        5,
+        10
+      ],
+      "scenario_capacity_a12": [
+        5,
+        6,
+        3,
+        5,
+        2,
+        2,
+        12
+      ],
+      "background_reserved_a7": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        2
+      ],
+      "background_reserved_a12": [
+        1,
+        0,
+        3,
+        1,
+        4,
+        4,
+        0
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0001": {
+      "scenario_id": 1,
+      "scenario_name": "scenario_0001",
+      "split": "train",
+      "seed": 4001,
+      "behavior_policy": "edf",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 120,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        5,
+        5,
+        6,
+        2,
+        6,
+        9
+      ],
+      "scenario_capacity_a12": [
+        4,
+        4,
+        3,
+        1,
+        1,
+        4,
+        8
+      ],
+      "background_reserved_a7": [
+        0,
+        1,
+        1,
+        0,
+        4,
+        0,
+        3
+      ],
+      "background_reserved_a12": [
+        2,
+        2,
+        3,
+        5,
+        5,
+        2,
+        4
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0002": {
+      "scenario_id": 2,
+      "scenario_name": "scenario_0002",
+      "split": "train",
+      "seed": 4002,
+      "behavior_policy": "lowest_energy",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 15.589,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        4,
+        4,
+        5,
+        3,
+        6,
+        4,
+        9
+      ],
+      "scenario_capacity_a12": [
+        5,
+        5,
+        2,
+        2,
+        1,
+        2,
+        12
+      ],
+      "background_reserved_a7": [
+        2,
+        2,
+        1,
+        3,
+        0,
+        2,
+        3
+      ],
+      "background_reserved_a12": [
+        1,
+        1,
+        4,
+        4,
+        5,
+        4,
+        0
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0003": {
+      "scenario_id": 3,
+      "scenario_name": "scenario_0003",
+      "split": "train",
+      "seed": 4003,
+      "behavior_policy": "earliest_finish",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        4,
+        6,
+        5,
+        1,
+        1,
+        3,
+        8
+      ],
+      "scenario_capacity_a12": [
+        4,
+        3,
+        2,
+        4,
+        4,
+        3,
+        12
+      ],
+      "background_reserved_a7": [
+        2,
+        0,
+        1,
+        5,
+        5,
+        3,
+        4
+      ],
+      "background_reserved_a12": [
+        2,
+        3,
+        4,
+        2,
+        2,
+        3,
+        0
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0004": {
+      "scenario_id": 4,
+      "scenario_name": "scenario_0004",
+      "split": "train",
+      "seed": 4004,
+      "behavior_policy": "edf",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.7,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        2,
+        2,
+        5,
+        5,
+        6,
+        11
+      ],
+      "scenario_capacity_a12": [
+        6,
+        5,
+        5,
+        1,
+        1,
+        3,
+        12
+      ],
+      "background_reserved_a7": [
+        0,
+        4,
+        4,
+        1,
+        1,
+        0,
+        1
+      ],
+      "background_reserved_a12": [
+        0,
+        1,
+        1,
+        5,
+        5,
+        3,
+        0
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0005": {
+      "scenario_id": 5,
+      "scenario_name": "scenario_0005",
+      "split": "train",
+      "seed": 4005,
+      "behavior_policy": "lowest_energy",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 15.589,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        3,
+        5,
+        1,
+        1,
+        1,
+        10
+      ],
+      "scenario_capacity_a12": [
+        6,
+        3,
+        5,
+        5,
+        5,
+        2,
+        8
+      ],
+      "background_reserved_a7": [
+        0,
+        3,
+        1,
+        5,
+        5,
+        5,
+        2
+      ],
+      "background_reserved_a12": [
+        0,
+        3,
+        1,
+        1,
+        1,
+        4,
+        4
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0006": {
+      "scenario_id": 6,
+      "scenario_name": "scenario_0006",
+      "split": "train",
+      "seed": 4006,
+      "behavior_policy": "earliest_finish",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 13.867999999999999,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        4,
+        3,
+        3,
+        5,
+        2,
+        3,
+        10
+      ],
+      "scenario_capacity_a12": [
+        5,
+        5,
+        4,
+        2,
+        6,
+        2,
+        9
+      ],
+      "background_reserved_a7": [
+        2,
+        3,
+        3,
+        1,
+        4,
+        3,
+        2
+      ],
+      "background_reserved_a12": [
+        1,
+        1,
+        2,
+        4,
+        0,
+        4,
+        3
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0007": {
+      "scenario_id": 7,
+      "scenario_name": "scenario_0007",
+      "split": "train",
+      "seed": 4007,
+      "behavior_policy": "edf",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        5,
+        5,
+        1,
+        2,
+        3,
+        8
+      ],
+      "scenario_capacity_a12": [
+        5,
+        6,
+        6,
+        1,
+        2,
+        2,
+        10
+      ],
+      "background_reserved_a7": [
+        0,
+        1,
+        1,
+        5,
+        4,
+        3,
+        4
+      ],
+      "background_reserved_a12": [
+        1,
+        0,
+        0,
+        5,
+        4,
+        4,
+        2
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0008": {
+      "scenario_id": 8,
+      "scenario_name": "scenario_0008",
+      "split": "train",
+      "seed": 4008,
+      "behavior_policy": "lowest_energy",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 15.378000000000002,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        5,
+        6,
+        3,
+        6,
+        3,
+        3,
+        10
+      ],
+      "scenario_capacity_a12": [
+        4,
+        5,
+        5,
+        4,
+        5,
+        1,
+        12
+      ],
+      "background_reserved_a7": [
+        1,
+        0,
+        3,
+        0,
+        3,
+        3,
+        2
+      ],
+      "background_reserved_a12": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        5,
+        0
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0009": {
+      "scenario_id": 9,
+      "scenario_name": "scenario_0009",
+      "split": "train",
+      "seed": 4009,
+      "behavior_policy": "earliest_finish",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 13.629999999999999,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        2,
+        5,
+        1,
+        6,
+        6,
+        10
+      ],
+      "scenario_capacity_a12": [
+        5,
+        3,
+        2,
+        3,
+        5,
+        5,
+        9
+      ],
+      "background_reserved_a7": [
+        0,
+        4,
+        1,
+        5,
+        0,
+        0,
+        2
+      ],
+      "background_reserved_a12": [
+        1,
+        3,
+        4,
+        3,
+        1,
+        1,
+        3
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0010": {
+      "scenario_id": 10,
+      "scenario_name": "scenario_0010",
+      "split": "train",
+      "seed": 4010,
+      "behavior_policy": "edf",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        5,
+        5,
+        4,
+        1,
+        1,
+        5,
+        8
+      ],
+      "scenario_capacity_a12": [
+        4,
+        3,
+        5,
+        5,
+        1,
+        5,
+        9
+      ],
+      "background_reserved_a7": [
+        1,
+        1,
+        2,
+        5,
+        5,
+        1,
+        4
+      ],
+      "background_reserved_a12": [
+        2,
+        3,
+        1,
+        1,
+        5,
+        1,
+        3
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0011": {
+      "scenario_id": 11,
+      "scenario_name": "scenario_0011",
+      "split": "train",
+      "seed": 4011,
+      "behavior_policy": "lowest_energy",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 15.589,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        5,
+        3,
+        4,
+        5,
+        4,
+        6,
+        11
+      ],
+      "scenario_capacity_a12": [
+        4,
+        6,
+        4,
+        4,
+        5,
+        2,
+        9
+      ],
+      "background_reserved_a7": [
+        1,
+        3,
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "background_reserved_a12": [
+        2,
+        0,
+        2,
+        2,
+        1,
+        4,
+        3
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0012": {
+      "scenario_id": 12,
+      "scenario_name": "scenario_0012",
+      "split": "train",
+      "seed": 4012,
+      "behavior_policy": "earliest_finish",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        3,
+        4,
+        3,
+        4,
+        2,
+        12
+      ],
+      "scenario_capacity_a12": [
+        6,
+        3,
+        6,
+        1,
+        5,
+        5,
+        11
+      ],
+      "background_reserved_a7": [
+        0,
+        3,
+        2,
+        3,
+        2,
+        4,
+        0
+      ],
+      "background_reserved_a12": [
+        0,
+        3,
+        0,
+        5,
+        1,
+        1,
+        1
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0013": {
+      "scenario_id": 13,
+      "scenario_name": "scenario_0013",
+      "split": "train",
+      "seed": 4013,
+      "behavior_policy": "edf",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        5,
+        5,
+        6,
+        6,
+        2,
+        4,
+        10
+      ],
+      "scenario_capacity_a12": [
+        5,
+        3,
+        4,
+        4,
+        6,
+        1,
+        11
+      ],
+      "background_reserved_a7": [
+        1,
+        1,
+        0,
+        0,
+        4,
+        2,
+        2
+      ],
+      "background_reserved_a12": [
+        1,
+        3,
+        2,
+        2,
+        0,
+        5,
+        1
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0014": {
+      "scenario_id": 14,
+      "scenario_name": "scenario_0014",
+      "split": "train",
+      "seed": 4014,
+      "behavior_policy": "lowest_energy",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 15.589,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        4,
+        3,
+        5,
+        5,
+        6,
+        6,
+        11
+      ],
+      "scenario_capacity_a12": [
+        5,
+        6,
+        6,
+        4,
+        4,
+        2,
+        10
+      ],
+      "background_reserved_a7": [
+        2,
+        3,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "background_reserved_a12": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        4,
+        2
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0015": {
+      "scenario_id": 15,
+      "scenario_name": "scenario_0015",
+      "split": "train",
+      "seed": 4015,
+      "behavior_policy": "earliest_finish",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        5,
+        3,
+        2,
+        1,
+        3,
+        1,
+        11
+      ],
+      "scenario_capacity_a12": [
+        6,
+        3,
+        2,
+        5,
+        1,
+        2,
+        8
+      ],
+      "background_reserved_a7": [
+        1,
+        3,
+        4,
+        5,
+        3,
+        5,
+        1
+      ],
+      "background_reserved_a12": [
+        0,
+        3,
+        4,
+        1,
+        5,
+        4,
+        4
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0016": {
+      "scenario_id": 16,
+      "scenario_name": "scenario_0016",
+      "split": "train",
+      "seed": 4016,
+      "behavior_policy": "edf",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 120,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        5,
+        2,
+        5,
+        1,
+        1,
+        5,
+        11
+      ],
+      "scenario_capacity_a12": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        5,
+        8
+      ],
+      "background_reserved_a7": [
+        1,
+        4,
+        1,
+        5,
+        5,
+        1,
+        1
+      ],
+      "background_reserved_a12": [
+        2,
+        2,
+        3,
+        2,
+        3,
+        1,
+        4
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0017": {
+      "scenario_id": 17,
+      "scenario_name": "scenario_0017",
+      "split": "train",
+      "seed": 4017,
+      "behavior_policy": "lowest_energy",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 15.589,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        2,
+        3,
+        1,
+        1,
+        1,
+        11
+      ],
+      "scenario_capacity_a12": [
+        4,
+        3,
+        4,
+        3,
+        6,
+        3,
+        9
+      ],
+      "background_reserved_a7": [
+        0,
+        4,
+        3,
+        5,
+        5,
+        5,
+        1
+      ],
+      "background_reserved_a12": [
+        2,
+        3,
+        2,
+        3,
+        0,
+        3,
+        3
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0018": {
+      "scenario_id": 18,
+      "scenario_name": "scenario_0018",
+      "split": "val",
+      "seed": 4018,
+      "behavior_policy": "earliest_finish",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        3,
+        4,
+        2,
+        4,
+        3,
+        10
+      ],
+      "scenario_capacity_a12": [
+        5,
+        5,
+        5,
+        1,
+        6,
+        3,
+        8
+      ],
+      "background_reserved_a7": [
+        0,
+        3,
+        2,
+        4,
+        2,
+        3,
+        2
+      ],
+      "background_reserved_a12": [
+        1,
+        1,
+        1,
+        5,
+        0,
+        3,
+        4
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0019": {
+      "scenario_id": 19,
+      "scenario_name": "scenario_0019",
+      "split": "val",
+      "seed": 4019,
+      "behavior_policy": "edf",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        4,
+        6,
+        5,
+        4,
+        4,
+        11
+      ],
+      "scenario_capacity_a12": [
+        6,
+        6,
+        6,
+        6,
+        5,
+        3,
+        9
+      ],
+      "background_reserved_a7": [
+        0,
+        2,
+        0,
+        1,
+        2,
+        2,
+        1
+      ],
+      "background_reserved_a12": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        3
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0020": {
+      "scenario_id": 20,
+      "scenario_name": "scenario_0020",
+      "split": "val",
+      "seed": 4020,
+      "behavior_policy": "lowest_energy",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 15.589,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        5,
+        6,
+        6,
+        3,
+        6,
+        2,
+        8
+      ],
+      "scenario_capacity_a12": [
+        5,
+        5,
+        5,
+        1,
+        6,
+        4,
+        8
+      ],
+      "background_reserved_a7": [
+        1,
+        0,
+        0,
+        3,
+        0,
+        4,
+        4
+      ],
+      "background_reserved_a12": [
+        1,
+        1,
+        1,
+        5,
+        0,
+        2,
+        4
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0021": {
+      "scenario_id": 21,
+      "scenario_name": "scenario_0021",
+      "split": "test",
+      "seed": 4021,
+      "behavior_policy": "earliest_finish",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        6,
+        5,
+        5,
+        2,
+        3,
+        2,
+        8
+      ],
+      "scenario_capacity_a12": [
+        5,
+        4,
+        6,
+        5,
+        4,
+        5,
+        11
+      ],
+      "background_reserved_a7": [
+        0,
+        1,
+        1,
+        4,
+        3,
+        4,
+        4
+      ],
+      "background_reserved_a12": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        1,
+        1
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0022": {
+      "scenario_id": 22,
+      "scenario_name": "scenario_0022",
+      "split": "test",
+      "seed": 4022,
+      "behavior_policy": "edf",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 12.911,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        4,
+        3,
+        3,
+        2,
+        2,
+        6,
+        11
+      ],
+      "scenario_capacity_a12": [
+        6,
+        3,
+        4,
+        2,
+        1,
+        1,
+        10
+      ],
+      "background_reserved_a7": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        0,
+        1
+      ],
+      "background_reserved_a12": [
+        0,
+        3,
+        2,
+        4,
+        5,
+        5,
+        2
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    },
+    "scenario_0023": {
+      "scenario_id": 23,
+      "scenario_name": "scenario_0023",
+      "split": "test",
+      "seed": 4023,
+      "behavior_policy": "lowest_energy",
+      "snapshot_mode": "event_driven_decision_epochs",
+      "time_unit": "second",
+      "num_snapshots": 121,
+      "final_simulation_time_sec": 15.589,
+      "final_completed_tasks": 60,
+      "scenario_capacity_a7": [
+        5,
+        6,
+        5,
+        6,
+        2,
+        2,
+        11
+      ],
+      "scenario_capacity_a12": [
+        4,
+        6,
+        4,
+        1,
+        2,
+        4,
+        8
+      ],
+      "background_reserved_a7": [
+        1,
+        0,
+        1,
+        0,
+        4,
+        4,
+        1
+      ],
+      "background_reserved_a12": [
+        2,
+        0,
+        2,
+        5,
+        4,
+        2,
+        4
+      ],
+      "trajectory_csv": "trajectory.csv",
+      "snapshots_dir": "snapshots"
+    }
+  }
+}

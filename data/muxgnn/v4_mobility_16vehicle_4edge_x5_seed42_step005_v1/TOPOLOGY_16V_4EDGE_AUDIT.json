@@ -1,0 +1,86 @@
+{
+  "version": "v4_mobility_16vehicle_4edge_x5_seed42_step005_v1",
+  "vehicles": 16,
+  "servers": 4,
+  "num_tasks": 60,
+  "num_dag_edges": 126,
+  "num_graph_nodes": 80,
+  "num_node_types": 3,
+  "num_relation_types": 5,
+  "max_potential_v2v_pairs": 120,
+  "max_potential_v2i_pairs": 64,
+  "v2v_distance_m": 150,
+  "v2i_distance_m": 300,
+  "sumo_seed": 42,
+  "step_length_sec": 0.05,
+  "derived_runtime_deadline_energy_factor": 5,
+  "workflow_deadline_sec": 73.025,
+  "server_sites": [
+    {
+      "id": "EDGE0",
+      "x": 500.0,
+      "y": 700.0,
+      "range_m": 300,
+      "a7_cores": 12,
+      "a12_cores": 12
+    },
+    {
+      "id": "EDGE1",
+      "x": 1050.0,
+      "y": 800.0,
+      "range_m": 300,
+      "a7_cores": 12,
+      "a12_cores": 12
+    },
+    {
+      "id": "EDGE2",
+      "x": 1400.0,
+      "y": 330.0,
+      "range_m": 300,
+      "a7_cores": 12,
+      "a12_cores": 12
+    },
+    {
+      "id": "EDGE3",
+      "x": 829.67,
+      "y": 233.18,
+      "range_m": 300,
+      "a7_cores": 12,
+      "a12_cores": 12
+    }
+  ],
+  "safe_core_edges": 438,
+  "coverage_safe_core_edges_existing_3": 253,
+  "coverage_safe_core_edges_with_4": 320,
+  "coverage_by_server_safe_core_edges": {
+    "EDGE0": 39,
+    "EDGE1": 81,
+    "EDGE2": 136,
+    "EDGE3": 72
+  },
+  "retained_fixed_destination_count": 30,
+  "destination_note": "Retained prior 30 destinations, as 100-destination change was only discussed and not requested for implementation",
+  "sumo_trace_mode": "offline capture then event-driven PPO",
+  "sumo_executed_here": false,
+  "ppo_training_executed_here": false,
+  "heft_logic_smoke_passed": true,
+  "single_dag_generalization_limit": "one unchanged 60-task DAG",
+  "observation_contract_smoke": {
+    "conditions": "synthetic trace, temporary dependency stubs for absent PyG/Gym; NOT full Torch-Geometric/PPO train",
+    "action_mask_length": 2560,
+    "action_mask_matching_valid_actions": true,
+    "task_features": [
+      64,
+      10
+    ],
+    "vehicle_features": [
+      16,
+      4
+    ],
+    "edge_features": [
+      4,
+      4
+    ],
+    "magnitude": "original reward unchanged, energy 5x from fixed power"
+  }
+}

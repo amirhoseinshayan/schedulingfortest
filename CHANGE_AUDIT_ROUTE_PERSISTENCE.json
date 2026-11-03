@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "validation_type": "static configuration/code verification only; SUMO executable unavailable",
+  "seed": 42,
+  "vehicle_ids": [
+    "V0",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5"
+  ],
+  "loop_closure": true,
+  "unchanged_original_route_edge_sequences": true,
+  "randomized_depart_edge_index_bounded_by_base_lap": true,
+  "min_route_remaining_time_s": 117635.5225,
+  "simulated_horizon_s": 600,
+  "sumo_step_s": 0.05,
+  "original_project_untouched_except_route_related_files": true,
+  "changed_existing_files": [
+    "scheduling_utils/RUN_SUMO_3EDGE_FA.md",
+    "scheduling_utils/muxgnn/mobility3/capture.py",
+    "scheduling_utils/sumo_three_edge/run_gui_links.py",
+    "scheduling_utils/sumo_three_edge/six_vehicles.rou.xml"
+  ],
+  "added_files": [
+    "scheduling_utils/sumo_three_edge/loop_initialization_audit.json",
+    "scheduling_utils/sumo_three_edge/prepare_loops.py"
+  ],
+  "deleted_files": [],
+  "sumo_runtime_test": "NOT RUN; must run capture on SUMO-equipped machine",
+  "seed_reproducible": true,
+  "seed_variability_checked": true,
+  "graph_heft_ppo_scale_reward_unchanged": true
+}

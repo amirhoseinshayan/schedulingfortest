@@ -1,0 +1,170 @@
+{
+  "dataset_name": "Legacy-native Dynamic MAGNET v4 Physical Time",
+  "dataset_version": "legacy_native_dynamic_magnet_v4_physical_time",
+  "purpose": "finalized physical-time, event-driven multi-snapshot dataset for fair muxGNN/PPO and HEFT integration",
+  "source": {
+    "legacy_dag_file": "/mnt/data/muxgnn_v4_mi_fix_work/fucking-research/scheduling_utils/data/legacy/dag_dataset_gang_a7_a12.csv",
+    "benchmark_profile_file": "/mnt/data/muxgnn_v4_mi_fix_work/fucking-research/scheduling_utils/data/legacy/benchmark_profiles_a7_a12.csv",
+    "legacy_dag_sha256": "00b25ab8070ab7e9224034432ff35cfc50542f3ff438b413dc03a443e25d0aad",
+    "benchmark_profiles_sha256": "1e96d2a65a06f3623dd793b41052de525ba619bce2b6ab96a8210ee4a3614cb4",
+    "same_validated_60_task_126_edge_dag_as_v2_v3": true,
+    "dagbench_used": false
+  },
+  "physical_units": {
+    "raw_execution_time": "millisecond",
+    "stored_scheduling_time": "second",
+    "power": "watt",
+    "energy": "joule",
+    "conversion": "execution_time_sec = execution_time_ms / 1000"
+  },
+  "period_semantics": {
+    "source_value": 1,
+    "physical_period_claimed": false,
+    "meaning": "placeholder chosen so utilization = execution_time / period numerically equals execution_time",
+    "used_as_arrival_period": false,
+    "used_as_release_time": false
+  },
+  "release_ready_semantics": {
+    "workload_model": "single DAG known completely at design time",
+    "external_release_time_sec": 0.0,
+    "all_tasks_release_at_zero": true,
+    "root_ready_time_sec": 0.0,
+    "non_root_ready_time_formula": "max(release_time_sec, max(predecessor_finish_time_sec))",
+    "release_time_and_ready_time_are_distinct": true
+  },
+  "deadline_model": {
+    "type": "critical_path_proportional_absolute_subdeadlines",
+    "independent_of_heft_and_ppo": true,
+    "slack_factor": 1.15,
+    "fastest_task_runtime": "w_i = min(A7_execution_time_sec, A12_execution_time_sec); no division by m_i",
+    "dependency_earliest_finish": "EF_i = max(EF_pred) + fastest_task_runtime_i",
+    "critical_path_sec": 12.7,
+    "workflow_deadline_sec": 14.604999999999999,
+    "task_deadline_formula": "D_i = release + (EF_i/CP) * (D_workflow-release) = 1.15 * EF_i",
+    "legacy_heft_like_deadline_retained_only_for_audit": true
+  },
+  "graph": {
+    "node_types": [
+      "task",
+      "vehicle",
+      "edge_server"
+    ],
+    "num_tasks": 60,
+    "num_vehicles": 6,
+    "num_edge_servers": 1,
+    "num_dependency_edges": 126,
+    "num_topological_layers": 8,
+    "static_candidate_edge_counts": {
+      "local_execute_on": 60,
+      "v2v_offload_to": 120,
+      "v2i_offload_to": 60
+    },
+    "dynamic_relation": "contends_with"
+  },
+  "feature_names": {
+    "task_node": [
+      "gang_size",
+      "deadline_sec",
+      "exec_time_a7_sec",
+      "exec_time_a12_sec",
+      "energy_a7_j",
+      "energy_a12_j",
+      "ready_time_sec",
+      "is_ready",
+      "is_running",
+      "is_completed"
+    ],
+    "vehicle_node": [
+      "total_a7_cores",
+      "total_a12_cores",
+      "available_a7_ratio",
+      "available_a12_ratio"
+    ],
+    "edge_server_node": [
+      "total_a7_cores",
+      "total_a12_cores",
+      "available_a7_ratio",
+      "available_a12_ratio"
+    ],
+    "dependency_edge": [],
+    "candidate_edge": [
+      "exec_time_a7_sec",
+      "exec_time_a12_sec",
+      "exec_energy_a7_j",
+      "exec_energy_a12_j",
+      "available_ratio_a7",
+      "available_ratio_a12",
+      "feasible_a7",
+      "feasible_a12"
+    ],
+    "contention_edge": [
+      "source_gang_ratio",
+      "target_gang_ratio",
+      "combined_gang_ratio",
+      "blocking_shared_pool_ratio"
+    ]
+  },
+  "normalization": {
+    "gang_size_scale": 6.0,
+    "deadline_scale_sec": 14.604999999999999,
+    "task_execution_time_scale_sec": 5.72,
+    "task_energy_scale_j": 4.8384940777465415,
+    "ready_time_scale_sec": 14.604999999999999,
+    "resource_core_scale": 12.0,
+    "candidate_execution_time_scale_sec": 5.72,
+    "candidate_energy_scale_j": 4.8384940777465415,
+    "per_snapshot_refit": false,
+    "label_or_outcome_statistics_used": false,
+    "scope": "fixed source-task/resource scales reused across all scenarios and snapshots"
+  },
+  "compute_model": {
+    "processor_types": [
+      "A7",
+      "A12"
+    ],
+    "gang_size_range": [
+      1,
+      6
+    ],
+    "mixed_gang": false,
+    "runtime_model": "measured task duration: Runtime_A7=T_A7 and Runtime_A12=T_A12; m_i only reserves simultaneous cores",
+    "energy_model": "E=T_task*P_avg_total; m_i does not rescale runtime or energy"
+  },
+  "provenance": {
+    "execution_time_unit": "supervisor-confirmed millisecond interpretation of original raw execution values",
+    "task_profiles_and_dag": "existing validated project artifacts",
+    "resource_scenario_capacity": "controlled seeded synthetic background reservations",
+    "trajectory_actions": "non-learning policies only for offline state coverage"
+  },
+  "intentionally_not_invented": [
+    "mobility trace",
+    "vehicle coordinates",
+    "physical distance",
+    "link bandwidth",
+    "task data size",
+    "V2V/V2I transmission delay",
+    "contact duration",
+    "queue delay",
+    "migration delay"
+  ],
+  "limitations": [
+    "All scenarios share one 60-task DAG, so this split tests dynamic resource-state generalization rather than unseen-DAG topology generalization.",
+    "Scenario background reservations are controlled synthetic states, not measured vehicular background loads.",
+    "The deadline model is synthetic but scheduler-independent and explicitly documented."
+  ],
+  "scenario_design": {
+    "total_scenarios": 24,
+    "train_scenarios": 18,
+    "val_scenarios": 3,
+    "test_scenarios": 3,
+    "base_seed": 4000,
+    "behavior_policies": [
+      "earliest_finish",
+      "edf",
+      "lowest_energy"
+    ],
+    "policy_assignment": "scenario_id modulo number of behavior policies",
+    "split_unit": "scenario",
+    "snapshot_leakage_across_splits": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "source_validation": "PASS",
+  "trajectory_simulation_validation": "PASS",
+  "tasks": 60,
+  "dependency_edges": 126,
+  "topological_layers": 8,
+  "scenarios": 24,
+  "train_scenarios": 18,
+  "val_scenarios": 3,
+  "test_scenarios": 3,
+  "decision_epochs_per_scenario": null,
+  "total_expected_pyg_snapshots": 2902,
+  "split_expected_snapshots": {
+    "train": 2176,
+    "val": 363,
+    "test": 363
+  },
+  "behavior_policy_counts": {
+    "earliest_finish": 8,
+    "edf": 8,
+    "lowest_energy": 8
+  },
+  "critical_path_sec": 12.7,
+  "workflow_deadline_sec": 14.604999999999999,
+  "time_unit": "second",
+  "energy_unit": "joule",
+  "release_time_sec_all_tasks": 0.0,
+  "period_is_arrival_period": false,
+  "serialized_pyg_snapshots_in_zip": false,
+  "reason_no_pyg_snapshots": "Packaging runtime does not include torch-geometric; generator/validator are included for the project environment.",
+  "runtime_semantics": "Runtime_A7=T_A7; Runtime_A12=T_A12; m_i only controls simultaneous-core capacity/feasibility/reservation/contention",
+  "decision_epochs_per_scenario_min": 120,
+  "decision_epochs_per_scenario_max": 121,
+  "decision_epochs_per_scenario_constant": false
+}

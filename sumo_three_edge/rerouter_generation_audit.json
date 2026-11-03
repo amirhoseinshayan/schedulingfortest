@@ -1,0 +1,168 @@
+{
+  "version": "native SUMO destProbReroute, seeded runtime random choices",
+  "sumo_seed": 42,
+  "simulation_horizon_seconds": 600.0,
+  "vehicle_count": 16,
+  "vehicle_ids": [
+    "V0",
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V9",
+    "V10",
+    "V11",
+    "V12",
+    "V13",
+    "V14",
+    "V15"
+  ],
+  "core_passenger_edges": 438,
+  "total_passenger_edges": 449,
+  "core_exit_guard_count": 10,
+  "core_exit_guard_edges": [
+    "-1462815762#1",
+    "1152880160",
+    "1170522567#0",
+    "1261128304",
+    "154041912#0",
+    "320420916#0",
+    "375311156#0",
+    "375311158#0",
+    "375312063#0",
+    "48859718#1"
+  ],
+  "sink_edges_outside_core": [
+    "1110756316",
+    "1164203952#0",
+    "1464597559",
+    "251884680",
+    "36259520#0"
+  ],
+  "destination_trigger_count": 30,
+  "destination_edges": [
+    "-109902441#1",
+    "-1199889720",
+    "-1423265551#1",
+    "-1426897602#1",
+    "-23017853#2",
+    "-24997595",
+    "-25945966",
+    "-356359316#1",
+    "-4597322#6",
+    "-55495482#0",
+    "1123184403",
+    "1126237668#0",
+    "131577612#0",
+    "1361878610",
+    "1423265551#2",
+    "1426897601#0",
+    "1447972532#0",
+    "1462815765#0",
+    "1499301688#1",
+    "194069450#0",
+    "22972469#0",
+    "24240245#0",
+    "4402037#0",
+    "4597325#0",
+    "65040958",
+    "66071379#0",
+    "68711084#0",
+    "710761408#0",
+    "785302399#0",
+    "85255869#0"
+  ],
+  "total_unique_rerouter_triggers": 40,
+  "per_vehicle_initial_routes": {
+    "V0": {
+      "start_edge": "1119937599#2",
+      "initial_destination": "85255869#0",
+      "initial_route_edges": 11
+    },
+    "V1": {
+      "start_edge": "-882389497",
+      "initial_destination": "-109902441#1",
+      "initial_route_edges": 13
+    },
+    "V2": {
+      "start_edge": "882389494#0",
+      "initial_destination": "4402037#0",
+      "initial_route_edges": 6
+    },
+    "V3": {
+      "start_edge": "191556835#0",
+      "initial_destination": "710761408#0",
+      "initial_route_edges": 8
+    },
+    "V4": {
+      "start_edge": "-1303648806#1",
+      "initial_destination": "1447972532#0",
+      "initial_route_edges": 16
+    },
+    "V5": {
+      "start_edge": "-24913267#3",
+      "initial_destination": "-356359316#1",
+      "initial_route_edges": 13
+    },
+    "V6": {
+      "start_edge": "-1464597518",
+      "initial_destination": "-356359316#1",
+      "initial_route_edges": 15
+    },
+    "V7": {
+      "start_edge": "-4579366#2",
+      "initial_destination": "-1199889720",
+      "initial_route_edges": 10
+    },
+    "V8": {
+      "start_edge": "-43231842",
+      "initial_destination": "-1423265551#1",
+      "initial_route_edges": 10
+    },
+    "V9": {
+      "start_edge": "356359316#0",
+      "initial_destination": "1126237668#0",
+      "initial_route_edges": 17
+    },
+    "V10": {
+      "start_edge": "375311155#0",
+      "initial_destination": "85255869#0",
+      "initial_route_edges": 13
+    },
+    "V11": {
+      "start_edge": "-909333702",
+      "initial_destination": "-25945966",
+      "initial_route_edges": 6
+    },
+    "V12": {
+      "start_edge": "-1462868925#2",
+      "initial_destination": "4402037#0",
+      "initial_route_edges": 15
+    },
+    "V13": {
+      "start_edge": "154041918#0",
+      "initial_destination": "1426897601#0",
+      "initial_route_edges": 10
+    },
+    "V14": {
+      "start_edge": "-24234486",
+      "initial_destination": "1123184403",
+      "initial_route_edges": 35
+    },
+    "V15": {
+      "start_edge": "-1468548800#0",
+      "initial_destination": "65040958",
+      "initial_route_edges": 9
+    }
+  },
+  "random_selection": "SUMO seeded RNG, normalized equal weights; every trigger excludes own edge",
+  "no_repeat_routes": true,
+  "no_reinsertion_or_teleport": true,
+  "all_destinations_inside_reachable_core": true,
+  "all_core_exits_guarded_before_irreversible_branch": true,
+  "static_audit": "passed; dynamic SUMO validation still required"
+}

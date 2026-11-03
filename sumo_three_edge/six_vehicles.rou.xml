@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+  <vType id="computeVehicle" vClass="passenger" length="4.7" minGap="2.5" maxSpeed="13.9" accel="2.0" decel="4.5" sigma="0.5" color="0,190,125" />
+  <route id="seeded_path_V0" edges="1119937599#2 38912785#0 24240246#0 1125871619#3 236092221#0 24913267#0 326116286#0 -4588220#2 -1423265551#1 -1423271275#1 85255869#0" />
+  <route id="seeded_path_V1" edges="-882389497 171423001#0 1190781964 42102542#0 196850608#0 1424634881#0 1424634879 -1136657259#1 -4588222#1 -1424485855#1 -1477485105 -1110750064#0 -109902441#1" />
+  <route id="seeded_path_V2" edges="882389494#0 340498988#0 188386313#0 1119935543#0 1119936840#0 4402037#0" />
+  <route id="seeded_path_V3" edges="191556835#0 82488124#0 1425378547#0 1425266377#0 -197160273#4 -4588215#5 48859718#1 710761408#0" />
+  <route id="seeded_path_V4" edges="-1303648806#1 -320462163#1 -320462164#6 131577612#0 320462163#0 1303648806#0 -1423403179#1 -1423403177 -326116286#2 -24913267#3 342968607#0 1170522572#0 461526153#0 169999355#0 -1447972531#1 1447972532#0" />
+  <route id="seeded_path_V5" edges="-24913267#3 24913267#0 326116286#0 -4588220#2 -1423265552#1 -1424485859#1 -1424485851#1 82488124#0 1425378547#0 1425266377#0 335462921#0 -505526660#1 -356359316#1" />
+  <route id="seeded_path_V6" edges="-1464597518 1464597514#0 1426120125#2 375311158#0 110786129#0 1464597581 375311157#0 -375311155#2 -67099789#2 -327462543#2 -1464880130 -16374393#1 -1199889720 -505526660#1 -356359316#1" />
+  <route id="seeded_path_V7" edges="-4579366#2 1152880160 710761408#0 1468511725#0 710761406#0 335462921#0 707100745#0 1426075132 -16374393#1 -1199889720" />
+  <route id="seeded_path_V8" edges="-43231842 43231842 1477756865 -66071366#2 -1463683611 -1426897602#1 -1426897598#1 -1463158889 -1190781962#1 -1423265551#1" />
+  <route id="seeded_path_V9" edges="356359316#0 1199404285 -1110753055#2 43348945#0 1425266375#0 191556835#0 -1424485853#2 1424485851#2 1424485859#2 1423265552#2 -326116286#2 -24913267#3 342968607#0 1170522572#0 461526152#0 1126234503#0 1126237668#0" />
+  <route id="seeded_path_V10" edges="375311155#0 -375311155#2 -67099789#2 -327462543#2 -1464880130 -16374393#1 -1199889720 -1110753055#2 -710761407#2 -1425266390#2 -1468511702 -85255869#2 85255869#0" />
+  <route id="seeded_path_V11" edges="-909333702 171484594#0 68711084#0 -437325056#2 -1462842976 -25945966" />
+  <route id="seeded_path_V12" edges="-1462868925#2 -1499301688#0 -1426897603#3 -1426897602#1 -1426897598#1 -1463158889 -196850605#1 196850609#0 1427117336#2 194069450#0 461526153#0 188386313#0 1119935543#0 1119936840#0 4402037#0" />
+  <route id="seeded_path_V13" edges="154041918#0 168928174#0 1151333059#0 1263480787#0 43233756#0 1423265551#2 1190781963#0 35557143 1426897598#2 1426897601#0" />
+  <route id="seeded_path_V14" edges="-24234486 4412886 25945965 4588211 437325056#0 437325055#0 1125869405#0 38912785#0 24240246#0 1125871619#3 236092221#0 342968607#0 1170522572#0 -1448681854#1 -882389497 171423001#0 1190781964 42102542#0 196850608#0 1424634881#0 1424634879 1424634880#2 1424634884#0 1424634884#3 1132163645 -665241888#1 -375459783#1 -1073015940#3 -1073015940#1 -375459782 -1151333058#1 -43376693#1 1464597518 375311153#0 1123184403" />
+  <route id="seeded_path_V15" edges="-1468548800#0 4597324#2 4597325#0 1425266391 335462921#0 707100745#0 1426075132 1426079059#0 65040958" />
+  <vehicle id="V0" type="computeVehicle" route="seeded_path_V0" depart="0.0" departLane="best" departSpeed="max" color="27,171,123" departEdge="0" departPos="random_free" />
+  <vehicle id="V1" type="computeVehicle" route="seeded_path_V1" depart="0.2" departLane="best" departSpeed="max" color="0,130,245" departEdge="0" departPos="random_free" />
+  <vehicle id="V2" type="computeVehicle" route="seeded_path_V2" depart="0.4" departLane="best" departSpeed="max" color="255,164,66" departEdge="0" departPos="random_free" />
+  <vehicle id="V3" type="computeVehicle" route="seeded_path_V3" depart="0.6" departLane="best" departSpeed="max" color="157,89,220" departEdge="0" departPos="random_free" />
+  <vehicle id="V4" type="computeVehicle" route="seeded_path_V4" depart="0.8" departLane="best" departSpeed="max" color="218,70,115" departEdge="0" departPos="random_free" />
+  <vehicle id="V5" type="computeVehicle" route="seeded_path_V5" depart="1.0" departLane="best" departSpeed="max" color="20,183,202" departEdge="0" departPos="random_free" />
+  <vehicle id="V6" type="computeVehicle" route="seeded_path_V6" depart="1.2" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="50,70,154" />
+  <vehicle id="V7" type="computeVehicle" route="seeded_path_V7" depart="1.4" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="101,157,5" />
+  <vehicle id="V8" type="computeVehicle" route="seeded_path_V8" depart="1.6" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="152,244,112" />
+  <vehicle id="V9" type="computeVehicle" route="seeded_path_V9" depart="1.8" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="203,75,219" />
+  <vehicle id="V10" type="computeVehicle" route="seeded_path_V10" depart="2.0" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="254,162,70" />
+  <vehicle id="V11" type="computeVehicle" route="seeded_path_V11" depart="2.2" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="49,249,177" />
+  <vehicle id="V12" type="computeVehicle" route="seeded_path_V12" depart="2.4" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="100,80,28" />
+  <vehicle id="V13" type="computeVehicle" route="seeded_path_V13" depart="2.6" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="151,167,135" />
+  <vehicle id="V14" type="computeVehicle" route="seeded_path_V14" depart="2.8" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="202,254,242" />
+  <vehicle id="V15" type="computeVehicle" route="seeded_path_V15" depart="3.0" departLane="best" departSpeed="max" departEdge="0" departPos="random_free" color="253,85,93" />
+</routes>

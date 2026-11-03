@@ -1,0 +1,43 @@
+{
+  "derived_dataset_version": "v4_mobility_16vehicle_4edge_x5_seed42_step005_v1",
+  "derivation": "synthetic runtime/deadline scale 5x with power-held-fixed energy consistency",
+  "source_files_sha256": {
+    "dag": "00b25ab8070ab7e9224034432ff35cfc50542f3ff438b413dc03a443e25d0aad",
+    "benchmark": "1e96d2a65a06f3623dd793b41052de525ba619bce2b6ab96a8210ee4a3614cb4",
+    "v4_profiles": "496355b952360388aac670ad5d29f480285cd12054686f85200a9491fefd324b",
+    "v4_dependencies": "ee369808f6a2ba4afae6b3b4bf01da172cde662f14efb0cbfc35dbe91f0d6717"
+  },
+  "derived_profiles_sha256": "222b1a97f1c21203157bad5b9354580639cae5b3f2c34096d0bc32699b805c6e",
+  "source_profiles_untouched": true,
+  "task_count": 60,
+  "precedence_edge_count": 126,
+  "v4_critical_path_sec": 12.7,
+  "derived_critical_path_sec": 63.5,
+  "v4_workflow_deadline_sec": 14.604999999999999,
+  "derived_workflow_deadline_sec": 73.02499999999999,
+  "time_scale_factor": 5.0,
+  "energy_scale_factor": 5.0,
+  "power_scale_factor": 1.0,
+  "reference_benchmark_interpretation": "raw benchmark time interpreted as milliseconds (supervisor-confirmed)",
+  "scenario_physical_model": "duration_derived = duration_v4 * 5; energy_derived = duration_derived * measured_reference_avg_watts",
+  "physical_claim": "synthetic extended duration scenario; NOT newly measured A7/A12 runtime",
+  "sumo_random_seed": 42,
+  "sumo_step_sec": 0.05,
+  "route_departure": "departEdge=0, departPos=random_free, 16 seeded initial safe-core routes; SUMO destProbReroute selects new goals",
+  "graph_contract": "60 task + 16 vehicle + 4 edge = 80 real nodes; 5 existing relations; unchanged muxGNN layer count",
+  "original_reward_formula_unchanged": true,
+  "proof_checks": [
+    "per-task 13 numeric scaled fields",
+    "unchanged average power/gang/release/source DAG",
+    "energy=power*duration",
+    "deadline=1.15*dependency-EF",
+    "critical path scales fivefold"
+  ],
+  "not_tested": [
+    "SUMO dynamic trajectory for actual seeded run",
+    "PyG runtime full training"
+  ],
+  "source_files_immutable": true,
+  "server_count": 4,
+  "vehicle_count": 16
+}

@@ -1,0 +1,64 @@
+{
+  "original_archive": "muxgnn_v4_mi_runtime_semantics_fixed.zip",
+  "modified_existing_files": [
+    "README.md",
+    "muxgnn/rl/adapter.py",
+    "muxgnn/rl/config.py"
+  ],
+  "new_files_count": 28,
+  "new_files": [
+    "CHANGE_AUDIT_3EDGE.json",
+    "RUN_SUMO_3EDGE_FA.md",
+    "build_mobility_dataset_windows.bat",
+    "data/muxgnn/v4_mobility_three_edge_v1/STATIC_VALIDATION.json",
+    "muxgnn/mobility3/__init__.py",
+    "muxgnn/mobility3/builder.py",
+    "muxgnn/mobility3/capture.py",
+    "muxgnn/mobility3/env.py",
+    "muxgnn/mobility3/generate.py",
+    "muxgnn/mobility3/heft_online.py",
+    "muxgnn/mobility3/loader.py",
+    "muxgnn/mobility3/pretrain.py",
+    "muxgnn/mobility3/settings.py",
+    "muxgnn/mobility3/simulator.py",
+    "muxgnn/mobility3/trace.py",
+    "muxgnn/mobility3/train.py",
+    "muxgnn/mobility3/validate_static.py",
+    "sumo_three_edge/open_only_windows.bat",
+    "sumo_three_edge/osm.net.xml.gz",
+    "sumo_three_edge/route_manifest.json",
+    "sumo_three_edge/run_gui_links.py",
+    "sumo_three_edge/run_linux.sh",
+    "sumo_three_edge/run_windows.bat",
+    "sumo_three_edge/six_vehicles.rou.xml",
+    "sumo_three_edge/six_vehicles_three_servers.sumocfg",
+    "sumo_three_edge/three_edge_servers.add.xml",
+    "sumo_three_edge/three_servers.json",
+    "train_mobility_windows.bat"
+  ],
+  "removed_files": [
+    "legacy_gat/__pycache__/__init__.cpython-313.pyc",
+    "legacy_gat/__pycache__/create_dag.cpython-313.pyc",
+    "muxgnn/__pycache__/__init__.cpython-313.pyc",
+    "muxgnn/graph/__pycache__/__init__.cpython-313.pyc",
+    "muxgnn/graph/__pycache__/builder.cpython-313.pyc",
+    "muxgnn/graph/__pycache__/magnet_relation_layers.cpython-313.pyc",
+    "muxgnn/graph/__pycache__/settings.cpython-313.pyc",
+    "muxgnn/graph/__pycache__/v4_settings.cpython-313.pyc",
+    "muxgnn/graph/__pycache__/v4_simulation.cpython-313.pyc",
+    "muxgnn/graph/__pycache__/v4_source.cpython-313.pyc"
+  ],
+  "unchanged_count": 546,
+  "key_source_hashes": {
+    "source_task_profiles.csv": "496355b952360388aac670ad5d29f480285cd12054686f85200a9491fefd324b",
+    "dependency_edges.csv": "ee369808f6a2ba4afae6b3b4bf01da172cde662f14efb0cbfc35dbe91f0d6717",
+    "dag_dataset_gang_a7_a12.csv": "00b25ab8070ab7e9224034432ff35cfc50542f3ff438b413dc03a443e25d0aad",
+    "benchmark_profiles_a7_a12.csv": "1e96d2a65a06f3623dd793b41052de525ba619bce2b6ab96a8210ee4a3614cb4"
+  },
+  "validation": {
+    "static": "PASS",
+    "synthetic_trace_logic": "PASS",
+    "real_SUMO": "NOT_RUN",
+    "torch_geometric_PPO_train": "NOT_RUN"
+  }
+}

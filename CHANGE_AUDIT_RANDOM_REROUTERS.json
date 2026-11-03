@@ -1,0 +1,93 @@
+{
+  "project": "SUMO native seeded random destination rerouting over safe passenger SCC",
+  "base_archive": "MuxGNN_3Edge_Seed42_X5_Sumo005_PersistentLoops_Full.zip",
+  "source_v4_unmodified": true,
+  "fixed_reward_ppo_heft_muxgnn_unmodified": true,
+  "mobility_modifications_only": true,
+  "seed": 42,
+  "sumo_step_length_sec": 0.05,
+  "runtime_deadline_energy_scale": 5,
+  "changes": [
+    {
+      "path": "scheduling_utils/RUN_SUMO_3EDGE_FA.md",
+      "old_sha256": "cb30f682f536599cf829f81e9e74d23a198d5843ffa0daf59afbe8768b66bcef",
+      "new_sha256": "e18c8c826f9e0b37bc87e4c9cfc7427d8aa7a47a09447a27416f4df38ab411c7",
+      "operation": "replace"
+    },
+    {
+      "path": "scheduling_utils/muxgnn/mobility3/capture.py",
+      "old_sha256": "f27e4049929843c6b77e773ceb7dd14f62fe5a0be01453cd5cf7305d8ab719d2",
+      "new_sha256": "5ba01d28fe7f14225f96fc16ee61e858f91e801d05cacb2bf5b9bbd9e2ca0a85",
+      "operation": "replace"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/original_loop_start_edges.json",
+      "new_sha256": "a894310ff2f380359522b073e682e8b501d7066940e6385c7695d3f834612253",
+      "operation": "add"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/persistent_random_rerouters.add.xml",
+      "new_sha256": "425c941ba59db7ef7c47303df6ea6f85f4e7f232266c86b2ef8d42af22421a1c",
+      "operation": "add"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/prepare_loops.py",
+      "old_sha256": "ad2d6750d2081a4d90e74a147dfb7f2ac476963457854f3a84f897e0cb2bc2ff",
+      "new_sha256": "2fcc43793ac0f5886dc8deb27189db991c7ac49556239250be2aef59b0f4bd8b",
+      "operation": "replace"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/prepare_rerouters.py",
+      "new_sha256": "bd2fcb5d03b862665948d1cc26409b29ee01cd8318af34cdea28426901a41ea1",
+      "operation": "add"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/rerouter_generation_audit.json",
+      "new_sha256": "af4b272041683bf067009346c7c23dc271b3722fd9dad7c50e9f2141c6a26929",
+      "operation": "add"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/rerouter_static_validation.json",
+      "new_sha256": "350f4c39badc649a0b7d80cd00a7081d23f7cb08e47aa9b7f9191e839abb852a",
+      "operation": "add"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/route_manifest.json",
+      "old_sha256": "751a146ffac8f17af90c14aaed329c6f19d0eb0e7beb40105110b17cd4fe3955",
+      "new_sha256": "6c5643a1a8ead02def415db4bce611847de945f65d79937cd2bba33c4e470ac5",
+      "operation": "replace"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/run_gui_links.py",
+      "old_sha256": "9c12623a81bae9c2216036bf3a8dfbff344e6d5ada4f41383b9a48e5a79cb499",
+      "new_sha256": "ce24206894511d52ea0fc0cc888357e43dc6662a92006250dc3433846ebbf4b6",
+      "operation": "replace"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/six_vehicles.rou.xml",
+      "old_sha256": "b69453aef83bae293a5ad3ba90156442928dd1e4f17a7418927aafcbdde716df",
+      "new_sha256": "97282a04fa54dc684cc99a08abfe53a4abc83ba150f9670ac1b0055e00cec863",
+      "operation": "replace"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/six_vehicles_three_servers.sumocfg",
+      "old_sha256": "46165dd2fad9d7ce99012a4f95ca753377fc827649342184f9a1134825714c5b",
+      "new_sha256": "47cdf9b14c08c8c5a7f9f9a9f7aae0878b67e7a2ee3b60271034d9bcae8e58da",
+      "operation": "replace"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/validate_rerouters.py",
+      "new_sha256": "e120ad2649b329034e537aa3ca5b850a78659386aa23682bae53d7a5fb7fa172",
+      "operation": "add"
+    },
+    {
+      "path": "scheduling_utils/sumo_three_edge/loop_initialization_audit.json",
+      "operation": "remove",
+      "old_sha256": "77b69c48535b14bf1aa95d5a21bfe237accc18ddfef07f45a49d1b366c8293a3"
+    }
+  ],
+  "static_validator": "sumo_three_edge/validate_rerouters.py",
+  "dynamic_validation": "python -m muxgnn.mobility3.capture --seconds 600 --seed 42",
+  "dynamic_validation_performed": false,
+  "dynamic_validation_limitation": "SUMO executable is not installed in build environment"
+}

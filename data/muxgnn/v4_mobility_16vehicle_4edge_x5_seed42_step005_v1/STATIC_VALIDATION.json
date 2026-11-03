@@ -1,0 +1,18 @@
+{
+  "status": "STATIC_PASS",
+  "vehicles": 16,
+  "servers": 4,
+  "task_count": 60,
+  "dependency_count": 126,
+  "graph_nodes": 80,
+  "relation_types": 5,
+  "v2v_range_m": 150,
+  "v2i_range_m": 300,
+  "sumo_step_sec": 0.05,
+  "sumo_seed": 42,
+  "runtime_deadline_energy_factor": 5.0,
+  "benchmark_sha256": "1e96d2a65a06f3623dd793b41052de525ba619bce2b6ab96a8210ee4a3614cb4",
+  "dag_sha256": "00b25ab8070ab7e9224034432ff35cfc50542f3ff438b413dc03a443e25d0aad",
+  "sumo_execution_validated": false,
+  "ppo_training_validated": false
+}

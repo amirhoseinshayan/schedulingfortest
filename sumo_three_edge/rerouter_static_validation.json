@@ -1,0 +1,77 @@
+{
+  "valid": true,
+  "passenger_edges": 449,
+  "safe_core_edges": 438,
+  "unguarded_safe_core_exits": 0,
+  "rerouter_count": 40,
+  "unique_destinations": 30,
+  "all_initial_routes_valid": true,
+  "all_rerouter_destinations_valid": true,
+  "seeded_offline_graph_smoke": {
+    "V0": {
+      "destinations_seen": 14,
+      "roads_visited": 169
+    },
+    "V1": {
+      "destinations_seen": 14,
+      "roads_visited": 176
+    },
+    "V10": {
+      "destinations_seen": 16,
+      "roads_visited": 192
+    },
+    "V11": {
+      "destinations_seen": 15,
+      "roads_visited": 161
+    },
+    "V12": {
+      "destinations_seen": 16,
+      "roads_visited": 177
+    },
+    "V13": {
+      "destinations_seen": 13,
+      "roads_visited": 175
+    },
+    "V14": {
+      "destinations_seen": 16,
+      "roads_visited": 165
+    },
+    "V15": {
+      "destinations_seen": 13,
+      "roads_visited": 173
+    },
+    "V2": {
+      "destinations_seen": 16,
+      "roads_visited": 176
+    },
+    "V3": {
+      "destinations_seen": 14,
+      "roads_visited": 182
+    },
+    "V4": {
+      "destinations_seen": 16,
+      "roads_visited": 156
+    },
+    "V5": {
+      "destinations_seen": 14,
+      "roads_visited": 201
+    },
+    "V6": {
+      "destinations_seen": 15,
+      "roads_visited": 176
+    },
+    "V7": {
+      "destinations_seen": 17,
+      "roads_visited": 164
+    },
+    "V8": {
+      "destinations_seen": 13,
+      "roads_visited": 128
+    },
+    "V9": {
+      "destinations_seen": 16,
+      "roads_visited": 196
+    }
+  },
+  "limitations": "graph-level proof only; install SUMO and run 600-second TraCI capture for dynamic survival"
+}

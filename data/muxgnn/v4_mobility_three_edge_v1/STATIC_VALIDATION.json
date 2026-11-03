@@ -1,0 +1,19 @@
+{
+  "source_profiles_sha256": "1e96d2a65a06f3623dd793b41052de525ba619bce2b6ab96a8210ee4a3614cb4",
+  "source_dag_sha256": "00b25ab8070ab7e9224034432ff35cfc50542f3ff438b413dc03a443e25d0aad",
+  "tasks": 60,
+  "dependencies": 126,
+  "vehicles": 6,
+  "servers": 3,
+  "server_cores_a7_a12_each": [
+    12,
+    12
+  ],
+  "no_new_node_types": true,
+  "relation_types": 5,
+  "all_route_transitions_valid": true,
+  "configuration_well_formed": true,
+  "SUMO_binary_execution_tested": false,
+  "pyg_training_tested": false,
+  "status": "STATIC_PASS"
+}
